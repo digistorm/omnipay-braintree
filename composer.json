@@ -1,7 +1,7 @@
 {
-    "name": "omnipay/braintree",
+    "name": "digistorm/omnipay-braintree",
     "type": "library",
-    "description": "Braintree gateway for Omnipay payment processing library",
+    "description": "Fork: Braintree gateway for Omnipay payment processing library",
     "keywords": [
         "gateway",
         "merchant",
