@@ -106,6 +106,6 @@ GRAPHQL;
 
         $token = $responseData['data']['tokenizeCreditCard']['paymentMethod']['id'];
 
-        return new TokeniseCardResponse($this, $token);
+        return new TokeniseCardResponse($this, ['id' => $token]);
     }
 }
