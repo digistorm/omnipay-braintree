@@ -288,6 +288,16 @@ class Gateway extends AbstractGateway
     /**
      * @param array $parameters
      *
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function tokeniseCard(array $parameters = [])
+    {
+        return $this->createRequest('\Omnipay\Braintree\Message\TokeniseCardRequest', $parameters);
+    }
+
+    /**
+     * @param array $parameters
+     *
      * @return WebhookNotification
      *
      * @throws \Braintree\Exception\InvalidSignature

@@ -71,7 +71,7 @@ class GatewayTest extends GatewayTestCase
         $request = $this->gateway->createMerchantAccount();
         $this->assertInstanceOf('Omnipay\Braintree\Message\CreateMerchantAccountRequest', $request);
     }
-    
+
     public function testUpdateMerchantAccount()
     {
         $request = $this->gateway->updateMerchantAccount();
@@ -145,6 +145,12 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->cancelSubscription('1');
         $this->assertInstanceOf('Omnipay\Braintree\Message\CancelSubscriptionRequest', $request);
+    }
+
+    public function testTokeniseCard()
+    {
+        $request = $this->gateway->tokeniseCard();
+        $this->assertInstanceOf('Omnipay\Braintree\Message\TokeniseCardRequest', $request);
     }
 
     public function testParseNotification()
